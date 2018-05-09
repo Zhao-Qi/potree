@@ -2,28 +2,42 @@
 # README
 
 * [Getting Started](./docs/getting_started.md)
-* [Changelog](./docs/changelog.md)
-* [User Interface](./docs/user_interface.md)
-* [FAQ](./docs/faq.md)
-* [File Format](./docs/file_format.md)
 
 ## About
 
 Potree is a free open-source WebGL based point cloud renderer for large point clouds.
-
 It is based on the [TU Wien Scanopy project](https://www.cg.tuwien.ac.at/research/projects/Scanopy/)
-
+and it was part of the [Harvest4D Project](https://harvest4d.org/).
 
 
 <a href="http://potree.org/wp/demo/" target="_blank"> ![](./docs/images/potree_screens.png) </a>
 
-At the moment, this project is continued as master thesis under the [Harvest4D Project](https://harvest4d.org/)
-
 Newest information and work in progress is usually available on [twitter](https://twitter.com/m_schuetz)
 
-General infos, downloads, showcase, etc. at [potree.org](http://potree.org/)
+Contact: Markus Schütz (mschuetz@potree.org)
 
-Contact: Markus Schütz - mschuetz@potree.org
+Reference: [Potree: Rendering Large Point Clouds in Web Browsers](https://www.cg.tuwien.ac.at/research/publications/2016/SCHUETZ-2016-POT/SCHUETZ-2016-POT-thesis.pdf)
+
+## Build
+
+Make sure you have [node.js](http://nodejs.org/) installed
+
+Install all dependencies, as specified in package.json, 
+then, install the gulp build tool:
+
+    cd <potree_directory>
+    npm install 
+    npm install -g gulp
+
+Use the ```gulp watch``` command to 
+
+* create ./build/potree 
+* watch for changes to the source code and automatically create a new build on change
+* start a web server at localhost:1234. Go to http://localhost:1234/examples/ to test the examples.
+
+```
+gulp watch
+```
 
 ## Downloads
 
@@ -35,14 +49,14 @@ Take a look at the [potree showcase](http://potree.org/wp/demo/) for some live e
 
 ## Compatibility
 
-| Browser              | OS      | Result        |
-| -------------------- |:-------:|:-------------:|
-| Chrome 42            | Win7    | works         |
-| Firefox 34           | Win7    | works         |
-| Internet Explorer 11 | Win7    | partially works; performance issues |
-| Firefox              | Android | partially works, GUI and stability issues |
-| Opera                | Android | partially works, GUI and stability issues and slow |
-| Chrome               | Android | works |
+| Browser              | OS      | Result        |   |
+| -------------------- |:-------:|:-------------:|:-:|
+| Chrome 64            | Win10   | works         |   |
+| Firefox 58           | Win10   | works         |   |
+| Edge                 | Win10   | not supported |   |
+| Internet Explorer 11 | Win7    | not supported |   |
+| Chrome               | Android | works         | Reduced functionality due to unsupported WebGL extensions |
+| Opera                | Android | works         | Reduced functionality due to unsupported WebGL extensions |
 
 ## Credits
 
@@ -52,4 +66,4 @@ Take a look at the [potree showcase](http://potree.org/wp/demo/) for some live e
 * [Harvest4D](https://harvest4d.org/) Potree currently runs as Master Thesis under the Harvest4D Project
 * Christian Boucheny (EDL developer) and Daniel Girardeau-Montaut ([CloudCompare](http://www.danielgm.net/cc/)). The EDL shader was adapted from the CloudCompare source code!
 * [Martin Isenburg](http://rapidlasso.com/), [Georepublic](http://georepublic.de/en/),
-[Veesus](http://veesus.com/), [Sigeom Sa](http://www.sigeom.ch/), [SITN](http://www.ne.ch/sitn), [Pix4D](http://pix4d.com/) as well as all the contributers to potree and PotreeConverter and many more for their support.
+[Veesus](http://veesus.com/), [Sigeom Sa](http://www.sigeom.ch/), [SITN](http://www.ne.ch/sitn), [LBI ArchPro](http://archpro.lbg.ac.at/),  [Pix4D](http://pix4d.com/) as well as all the contributers to potree and PotreeConverter and many more for their support.
